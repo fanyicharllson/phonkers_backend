@@ -1,5 +1,4 @@
 [build]
-  base = "phonkers_backend"   
   functions = "netlify/functions"
 
 [functions]
