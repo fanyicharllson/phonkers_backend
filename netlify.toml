@@ -5,4 +5,4 @@
   external_node_modules = ["node-fetch"]
 
 [functions."sendTrending"]
-  schedule = "@every 1h"
+  schedule = "0 */3 * * *"
