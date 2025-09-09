@@ -169,7 +169,7 @@ exports.handler = async function (event, context) {
     // Android-specific styling
     android: {
       notification: {
-        icon: 'your_custom_icon',
+        icon: 'background',
         color: '#FF6B35', // Notification color
         sound: 'default'
       }
