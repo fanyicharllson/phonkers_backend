@@ -3,3 +3,6 @@ node_modules/
 *.log
 package-lock.json
 netlify/functions/node_modules/
+
+# Local Netlify folder
+.netlify

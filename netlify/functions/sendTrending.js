@@ -1,10 +1,21 @@
-const fetch = require("node-fetch");
+const fetch = globalThis.fetch || require("node-fetch");
 const { GoogleAuth } = require("google-auth-library");
+
+console.log("YOUTUBE_API_KEY:", !!process.env.YOUTUBE_API_KEY);
+console.log("FIREBASE_PROJECT_ID:", !!process.env.FIREBASE_PROJECT_ID);
+console.log("FIREBASE_SERVICE_ACCOUNT_KEY:", !!process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
+const key = process.env.FIREBASE_SERVICE_ACCOUNT_KEY;
+try {
+  const parsed = JSON.parse(key);
+  console.log('✅ JSON is valid!', parsed.project_id);
+} catch (error) {
+  console.log('❌ JSON error:', error.message);
+}
 
 // YouTube API service functions (same as before)
 const searchYouTubeVideos = async (query, maxResults = 8) => {
   const apiKey = process.env.YOUTUBE_API_KEY;
-  if (!apiKey) {
+  if (!apiKey) {                            
     throw new Error("YouTube API key not configured");
   }
 
