@@ -58,8 +58,8 @@ const getTrendingPhonks = async (limit = 10) => {
     const queries = [
       "phonk trending 2025",
       "drift phonk",
-      "dark phonk",
-      "phonk music",
+      "LXNGVX",
+      "popular phonk music",
       "memphis phonk",
     ];
 
