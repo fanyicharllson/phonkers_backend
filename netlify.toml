@@ -6,3 +6,6 @@
 
 [functions."sendTrending"]
   schedule = "0 */3 * * *"
+
+[functions."sendPostNotification"]
+  included_files = ["netlify/functions/sendPostNotification.js"]

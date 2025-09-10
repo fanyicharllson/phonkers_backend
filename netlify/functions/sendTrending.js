@@ -168,6 +168,7 @@ exports.handler = async function (event, context) {
         body: notificationBody,
       },
     data: {
+      type: 'trending_phonk',
       phonkId: topPhonk.id,
       phonkTitle: topPhonk.title,
       phonkArtist: topPhonk.artist,
